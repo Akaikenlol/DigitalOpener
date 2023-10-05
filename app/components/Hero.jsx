@@ -3,10 +3,13 @@
 import Image from "next/image";
 import blur from "../../public/blur.png";
 import Typed from "react-typed";
+import Link from "next/link";
+import Carousel from "./Carousel";
+import Gallary from "./Gallary";
 
 const Hero = () => {
 	return (
-		<div className="h-screen w-full bg-[#ecf0f3] relative overflow-y-hidden">
+		<div className="h-screen w-full bg-[#ecf0f3] relative ">
 			<Image
 				src={blur}
 				alt="blur"
@@ -24,7 +27,9 @@ const Hero = () => {
 						agency
 					</span>
 				</h1>
-				<h1 className="text-5xl sm:text-8xl font-bold z-20">With a twist</h1>
+				<h1 className="text-5xl sm:text-8xl font-bold z-20 mt-5">
+					With a twist
+				</h1>
 				<h2 className="text-2xl sm:text-4xl mt-4">
 					specializing in{" "}
 					<Typed
@@ -39,6 +44,20 @@ const Hero = () => {
 						loop
 					/>{" "}
 				</h2>
+				<div className=" justify-center items-center  text-center mx-auto pt-10 z-20 ">
+					<Link href="/pricing">
+						<button className="bg-black text-white text-2xl rounded-lg px-10 py-5 shadow-lg shadow-black/40 hover:bg-black/70 cursor-pointer ease-in-out duration-150">
+							See Plans
+						</button>
+					</Link>
+					<p className="mt-6 font-bold text-lg">
+						Subscription based model with no hidden fees, Unlimited Requests
+					</p>
+				</div>
+			</div>
+			<div>{/* <Carousel /> */}</div>
+			<div>
+				<Gallary />
 			</div>
 		</div>
 	);
