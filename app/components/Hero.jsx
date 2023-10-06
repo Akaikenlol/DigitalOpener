@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import blur from "../../public/blur.png";
+import blur2 from "../../public/blur2.png";
+import blur3 from "../../public/blur3.png";
 import Typed from "react-typed";
 import Link from "next/link";
 import Carousel from "./Carousel";
@@ -11,7 +12,7 @@ const Hero = () => {
 	return (
 		<div className="h-screen w-full bg-[#ecf0f3] relative ">
 			<Image
-				src={blur}
+				src={blur3}
 				alt="blur"
 				// layout="fill"
 				// objectFit="cover"
@@ -22,9 +23,9 @@ const Hero = () => {
 			{/* Main Text */}
 			<div className="flex flex-col justify-center items-center text-center mx-auto max-w-[1260px] pt-48">
 				<h1 className="text-5xl sm:text-8xl font-bold tracking-tight z-20">
-					A Software{" "}
+					Junior Web{" "}
 					<span className="bg-gradient-to-r from-[#83e3da] to-[#9be8e1] text-transparent bg-clip-text">
-						agency
+						Developer
 					</span>
 				</h1>
 				<h1 className="text-5xl sm:text-8xl font-bold z-20 mt-5">
@@ -44,7 +45,7 @@ const Hero = () => {
 						loop
 					/>{" "}
 				</h2>
-				<div className=" justify-center items-center  text-center mx-auto pt-10 z-20 ">
+				<div className="justify-center items-center  text-center mx-auto pt-10 z-20 ">
 					<Link href="/pricing">
 						<button className="bg-black text-white text-2xl rounded-lg px-10 py-5 shadow-lg shadow-black/40 hover:bg-black/70 cursor-pointer ease-in-out duration-150">
 							See Plans
@@ -54,9 +55,6 @@ const Hero = () => {
 						Subscription based model with no hidden fees, Unlimited Requests
 					</p>
 				</div>
-			</div>
-			<div>{/* <Carousel /> */}</div>
-			<div>
 				<Gallary />
 			</div>
 		</div>
