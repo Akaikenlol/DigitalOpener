@@ -15,7 +15,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="w-full fixed z-[100] bg-[#ecf0f3] shadow-xl h-20">
+		<nav className="w-full sticky z-[100] bg-[#ecf0f3] shadow-xl h-20 top-0">
 			<div className="flex items-center sm:justify-center justify-between h-full w-full">
 				<Link href="/">
 					<Image src={icon} alt="logo" width={60} height={60} priority />

@@ -2,6 +2,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import DeskNavbar from "./components/DeskNavbar";
+import UseLenis from "./components/useLenis";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,10 +15,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				<Navbar />
-				<DeskNavbar />
-				{children}
+			<body className={`${inter.className} scrollbar-none`}>
+				<UseLenis>
+					<Navbar />
+					<div className="w-full h-[100vh] fixed ">
+						<Image
+							src={"/blur3.png"}
+							alt="blur"
+							quality={100}
+							priority
+							fill
+							className="absolute animate-pulse object-fill fill-current"
+						/>
+					</div>
+					<DeskNavbar />
+					<div className="pb-60"> {children}</div>
+				</UseLenis>
 			</body>
 		</html>
 	);

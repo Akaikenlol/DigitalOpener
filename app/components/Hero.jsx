@@ -1,26 +1,11 @@
 "use client";
 
-import Image from "next/image";
-import blur from "../../public/blur.png";
-import blur2 from "../../public/blur2.png";
-import blur3 from "../../public/blur3.png";
-import Typed from "react-typed";
 import Link from "next/link";
-import Carousel from "./Carousel";
-import Gallary from "./Gallary";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
 	return (
-		<div className="h-screen w-full bg-[#ecf0f3] relative overflow-y-hidden">
-			<Image
-				src={blur3}
-				alt="blur"
-				// layout="fill"
-				// objectFit="cover"
-				quality={100}
-				priority
-				className="absolute animate-pulse object-fill fill-current "
-			/>
+		<div className="h-screen w-full relative scrollbar-none ">
 			{/* Main Text */}
 			<div className="flex flex-col justify-center items-center text-center mx-auto max-w-[1260px] pt-48">
 				<h1 className="text-5xl sm:text-8xl font-bold tracking-tight z-20">
@@ -32,20 +17,23 @@ const Hero = () => {
 				<h1 className="text-5xl sm:text-8xl font-bold z-20 mt-7">
 					With a twist
 				</h1>
-				<h2 className="text-2xl sm:text-4xl mt-7">
-					specializing in{" "}
-					<Typed
-						strings={[
-							"web development",
-							"mobile development",
-							"UI/UX design",
-							"branding",
-						]}
-						typeSpeed={200}
-						backSpeed={100}
-						loop
-					/>{" "}
-				</h2>
+				<TypeAnimation
+					sequence={[
+						"specializing in web development",
+						1000,
+						"specializing in UI/UX design",
+						1000,
+						"specializing in branding",
+						1000,
+						"specializing in mobile development",
+						1000,
+					]}
+					wrapper="span"
+					speed={50}
+					style={{ display: "inline-block" }}
+					repeat={Infinity}
+					className="text-2xl sm:text-4xl mt-7"
+				/>{" "}
 				<div className="justify-center items-center  text-center mx-auto pt-7 z-20 ">
 					<Link href="/project">
 						<button className="bg-black text-white text-2xl rounded-lg px-10 py-5 shadow-lg shadow-black/40 hover:bg-black/70 cursor-pointer ease-in-out duration-150">
