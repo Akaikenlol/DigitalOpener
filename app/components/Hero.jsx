@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import blur from "../../public/blur.png";
 import blur2 from "../../public/blur2.png";
 import blur3 from "../../public/blur3.png";
 import Typed from "react-typed";
@@ -10,7 +11,7 @@ import Gallary from "./Gallary";
 
 const Hero = () => {
 	return (
-		<div className="h-screen w-full bg-[#ecf0f3] relative ">
+		<div className="h-screen w-full bg-[#ecf0f3] relative overflow-y-hidden">
 			<Image
 				src={blur3}
 				alt="blur"
@@ -28,10 +29,10 @@ const Hero = () => {
 						Developer
 					</span>
 				</h1>
-				<h1 className="text-5xl sm:text-8xl font-bold z-20 mt-5">
+				<h1 className="text-5xl sm:text-8xl font-bold z-20 mt-7">
 					With a twist
 				</h1>
-				<h2 className="text-2xl sm:text-4xl mt-4">
+				<h2 className="text-2xl sm:text-4xl mt-7">
 					specializing in{" "}
 					<Typed
 						strings={[
@@ -45,17 +46,16 @@ const Hero = () => {
 						loop
 					/>{" "}
 				</h2>
-				<div className="justify-center items-center  text-center mx-auto pt-10 z-20 ">
-					<Link href="/pricing">
+				<div className="justify-center items-center  text-center mx-auto pt-7 z-20 ">
+					<Link href="/project">
 						<button className="bg-black text-white text-2xl rounded-lg px-10 py-5 shadow-lg shadow-black/40 hover:bg-black/70 cursor-pointer ease-in-out duration-150">
-							See Plans
+							View Project
 						</button>
 					</Link>
-					<p className="mt-6 font-bold text-lg">
-						Subscription based model with no hidden fees, Unlimited Requests
+					<p className="text-2xl sm:text-4xl mt-20">
+						Junior web dev with a twist, turning code into digital artistry.
 					</p>
 				</div>
-				<Gallary />
 			</div>
 		</div>
 	);
