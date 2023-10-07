@@ -2,8 +2,8 @@
 
 import { ReactLenis } from "@studio-freight/react-lenis";
 
-const UseLenis = ({ children }) => {
+const ExeLenis = ({ children }) => {
 	return <ReactLenis root>{children}</ReactLenis>;
 };
 
-export default UseLenis;
+export default ExeLenis;
